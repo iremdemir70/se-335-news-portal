@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Haber Portalı</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Gündem</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Siyaset</a></li>
+              <li><a class="dropdown-item" href="#">Toplum</a></li>
+              <li><a class="dropdown-item" href="#">Eğitim</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Ekonomi</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Borsa</a></li>
+              <li><a class="dropdown-item" href="#">Döviz</a></li>
+              <li><a class="dropdown-item" href="#">Kripto</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Spor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Finans</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Finance -->
+    <div id="finance-bar" class="finance-bar d-flex justify-content-around align-items-center py-2 px-3 bg-light text-dark">
+        <!-- JS ile içerik buraya eklenecek -->
+      </div>
+      
+  
+      <!-- wrapper   -->
+  <div class="container-fluid px-5 mt-4 position-relative">
+    <div class="row justify-content-center align-items-stretch">
+  
+      <!-- Left Ad -->
+      <div class="col-auto d-none d-lg-block">
+        <div id="leftAd" class="ad-box sticky-ad">
+          <a href="https://disneyland.disney.go.com/destinations/disneyland/" target="_blank">
+            <img src="https://images.pexels.com/photos/3428278/pexels-photo-3428278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Disney Ad Left" />
+          </a>
+          <button onclick="closeAd('leftAd')">✖</button>
+        </div>
+      </div>
+  
+      <!-- Center Content: Slider + Weather side by side -->
+      <div class="col-lg-8">
+        <div class="row h-100">
+          <!-- News Slider (larger) -->
+          <div class="col-md-7">
+            <div id="newsCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+              <div class="carousel-inner h-100" id="carousel-inner"></div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+  
+          <!-- Weather (right of slider, larger) -->
+          <div class="col-md-5">
+            <div class="weather-card text-white p-4 rounded h-100" style="background: linear-gradient(145deg, #403060, #805080); min-height: 300px;">
+              <h4 class="mb-3">İzmir 5 Günlük Hava Durumu</h4>
+              <div class="row row-cols-2 row-cols-md-5 g-2" id="weather-container">
+                <!-- Mock API verisi ile doldurulacak -->
+              </div>
+            </div>
+          </div>
+
+
+<div class="container mt-5">
+    <h4 class="mb-3">Deneme İçeriği - Scroll Testi</h4>
+    <div class="row">
+      <!-- dummy box -->
+      <div class="col-md-4 mb-4" style="height: 250px; background-color: #f2f2f2; border-radius: 8px;">Lorem ipsum dolor sit amet.</div>
+      <div class="col-md-4 mb-4" style="height: 250px; background-color: #e2e2e2; border-radius: 8px;">Consectetur adipiscing elit.</div>
+      <div class="col-md-4 mb-4" style="height: 250px; background-color: #d2d2d2; border-radius: 8px;">Sed do eiusmod tempor.</div>
+      <div class="col-md-4 mb-4" style="height: 250px; background-color: #c2c2c2; border-radius: 8px;">Incididunt ut labore et dolore.</div>
+      <div class="col-md-4 mb-4" style="height: 250px; background-color: #b2b2b2; border-radius: 8px;">Magna aliqua. Ut enim ad minim.</div>
+      <div class="col-md-4 mb-4" style="height: 250px; background-color: #a2a2a2; border-radius: 8px;">Veniam, quis nostrud exercitation.</div>
+    </div>
+  </div>
+        </div>
+      </div>
+  
+      <!-- Right Ad -->
+      <div class="col-auto d-none d-lg-block">
+        <div id="rightAd" class="ad-box sticky-ad">
+          <a href="https://disneyland.disney.go.com/destinations/disneyland/" target="_blank">
+            <img src="https://images.pexels.com/photos/3428278/pexels-photo-3428278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Disney Ad Right" />
+          </a>
+          <button onclick="closeAd('rightAd')">✖</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+  
+</body>
+</html>
+
+</body>
+</html>
+
+
+
