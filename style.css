@@ -1,103 +1,156 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #343a40 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #17a2b8 !important;
+}
+
+.finance-bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.finance-item span {
+  margin-left: 4px;
+}
+
+.finance-up {
+  color: #28a745;
+}
+
+.finance-down {
+  color: #dc3545;
+}
+
+.finance-neutral {
+  color: #6c757d;
+}
+
 .ad-box {
-    width: 150px;
-    height: 300px;
-    position: relative;
-  }
-  .ad-box img {
-    width: 100%;
-    height: 140%;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .ad-box img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  }
-  .ad-box button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease-in-out;
-  }
-  .ad-box button:hover {
-    transform: scale(1.2);
-    background-color: #bb2d3b;
-  }
+  width: 100%;
+  height: 240px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ad-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ad-box img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 992px) {
   .sticky-ad {
     position: sticky;
     top: 120px;
     z-index: 1000;
   }
-  .slider-img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  .weather-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-    height: 100%;
-    min-height: 400px;
-  }
-  .weather-card:hover {
-    transform: scale(1.02);
-  }
-  #weather-container .card {
-    background: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 6px;
-    text-align: center;
-    flex: 1;
-    min-width: 50px;
-  }
-  #weather-container .card .fw-bold {
-    font-size: 0.75rem;
-    margin-bottom: 4px;
-  }
-  .weather-icon {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    margin-bottom: 4px;
-  }
-  #weather-container .temp {
-    font-size: 0.75rem;
-    line-height: 1;
-  }
+}
 
-  .finance-bar {
-    font-size: 0.95rem;
-    font-weight: 500;
-    border-bottom: 1px solid #ddd;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .finance-item span {
-    margin-left: 4px;
-  }
-  .finance-up {
-    color: green;
-  }
-  .finance-down {
-    color: red;
-  }
-  .finance-neutral {
-    color: gray;
-  }
-  
+.ad-box button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.ad-box button:hover {
+  transform: scale(1.2);
+  background-color: #bb2d3b;
+}
+
+
+.sticky-ad {
+  position: sticky;
+  top: 120px;
+  z-index: 1000;
+}
+
+.slider-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+/* Kartlar */
+.card, .weather-card {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.card:hover, .weather-card:hover {
+  transform: translateY(-5px);
+}
+
+.weather-card {
+  padding: 1rem;
+  background: linear-gradient(145deg, #403060, #805080);
+  color: white;
+}
+.weather-card h5 {
+  font-size: 1rem;
+}
+
+#weather-container .card {
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 6px;
+  text-align: center;
+  flex: 1;
+  min-width: 40px;
+}
+#weather-container .fw-bold {
+  font-size: 0.75rem;
+}
+
+.weather-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+#weather-container .temp {
+  font-size: 0.75rem;
+  line-height: 1;
+}
