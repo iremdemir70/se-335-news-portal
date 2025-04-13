@@ -47,73 +47,63 @@
       </div>
       
   
-      <!-- wrapper   -->
-  <div class="container-fluid px-5 mt-4 position-relative">
-    <div class="row justify-content-center align-items-stretch">
-  
-      <!-- Left Ad -->
-      <div class="col-auto d-none d-lg-block">
-        <div id="leftAd" class="ad-box sticky-ad">
-          <a href="https://disneyland.disney.go.com/destinations/disneyland/" target="_blank">
-            <img src="https://images.pexels.com/photos/3428278/pexels-photo-3428278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Disney Ad Left" />
-          </a>
-          <button onclick="closeAd('leftAd')">✖</button>
-        </div>
+ <!-- WRAPPER: Left main slider + Right side content -->
+<div class="container-fluid px-5 mt-4 position-relative">
+  <div class="row justify-content-center align-items-stretch">
+
+    <!-- Left Ad -->
+    <div class="col-auto d-none d-lg-block">
+      <div id="leftAd" class="ad-box sticky-ad">
+        <a href="https://disneyland.disney.go.com/destinations/disneyland/" target="_blank">
+          <img src="https://images.pexels.com/photos/3428278/pexels-photo-3428278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Disney Ad Left" />
+        </a>
+        <button onclick="closeAd('leftAd')">✖</button>
       </div>
-  
-      <!-- Center Content: Slider + Weather side by side -->
-      <div class="col-lg-8">
-        <div class="row h-100">
-          <!-- News Slider (larger) -->
-          <div class="col-md-7">
-            <div id="newsCarousel" class="carousel slide h-100" data-bs-ride="carousel">
-              <div class="carousel-inner h-100" id="carousel-inner"></div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </button>
-            </div>
-          </div>
-  
-          <!-- Weather (right of slider, larger) -->
-          <div class="col-md-5">
-            <div class="weather-card text-white p-4 rounded h-100" style="background: linear-gradient(145deg, #403060, #805080); min-height: 300px;">
-              <h4 class="mb-3">İzmir 5 Günlük Hava Durumu</h4>
-              <div class="row row-cols-2 row-cols-md-5 g-2" id="weather-container">
-                <!-- Mock API verisi ile doldurulacak -->
-              </div>
-            </div>
-          </div>
-
-
-<div class="container mt-5">
-    <h4 class="mb-3">Deneme İçeriği - Scroll Testi</h4>
-    <div class="row">
-      <!-- dummy box -->
-      <div class="col-md-4 mb-4" style="height: 250px; background-color: #f2f2f2; border-radius: 8px;">Lorem ipsum dolor sit amet.</div>
-      <div class="col-md-4 mb-4" style="height: 250px; background-color: #e2e2e2; border-radius: 8px;">Consectetur adipiscing elit.</div>
-      <div class="col-md-4 mb-4" style="height: 250px; background-color: #d2d2d2; border-radius: 8px;">Sed do eiusmod tempor.</div>
-      <div class="col-md-4 mb-4" style="height: 250px; background-color: #c2c2c2; border-radius: 8px;">Incididunt ut labore et dolore.</div>
-      <div class="col-md-4 mb-4" style="height: 250px; background-color: #b2b2b2; border-radius: 8px;">Magna aliqua. Ut enim ad minim.</div>
-      <div class="col-md-4 mb-4" style="height: 250px; background-color: #a2a2a2; border-radius: 8px;">Veniam, quis nostrud exercitation.</div>
     </div>
-  </div>
-        </div>
+
+    <!-- Main Slider (Left) -->
+    <div class="col-lg-6">
+      <div id="newsCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100" id="carousel-inner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
-  
-      <!-- Right Ad -->
-      <div class="col-auto d-none d-lg-block">
-        <div id="rightAd" class="ad-box sticky-ad">
-          <a href="https://disneyland.disney.go.com/destinations/disneyland/" target="_blank">
-            <img src="https://images.pexels.com/photos/3428278/pexels-photo-3428278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Disney Ad Right" />
-          </a>
-          <button onclick="closeAd('rightAd')">✖</button>
+    </div>
+
+    <!-- Right Content: Side Slider + Weather -->
+    <div class="col-lg-4 d-flex flex-column gap-3">
+
+      <!-- News Slider 2 (small) -->
+      <div class="card p-2">
+        <img src="https://images.unsplash.com/photo-1629112283823-342ad419acf2?auto=compress&cs=tinysrgb&w=800" class="w-100 rounded mb-2" alt="Side News 1">
+        <p class="fw-bold small m-0">Dünyanın en zengin kadınları ve servetleri açıklandı</p>
+      </div>
+
+      <!-- Weather Widget -->
+      <div class="weather-card text-white p-3 rounded" style="background: linear-gradient(145deg, #403060, #805080); min-height: 300px;">
+        <h5 class="mb-3">İzmir 5 Günlük Hava Durumu</h5>
+        <div class="d-flex justify-content-between" id="weather-container">
+          <!-- JS ile doldurulacak -->
         </div>
       </div>
     </div>
+
+    <!-- Right Ad -->
+    <div class="col-auto d-none d-lg-block">
+      <div id="rightAd" class="ad-box sticky-ad">
+        <a href="https://disneyland.disney.go.com/destinations/disneyland/" target="_blank">
+          <img src="https://images.pexels.com/photos/3428278/pexels-photo-3428278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Disney Ad Right" />
+        </a>
+        <button onclick="closeAd('rightAd')">✖</button>
+      </div>
+    </div>
   </div>
+</div>
+
   
 
 
