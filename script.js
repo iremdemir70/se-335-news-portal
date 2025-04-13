@@ -53,6 +53,26 @@ function closeAd(id) {
   
   loadFinance();
   
+  async function loadMagazinNews() {
+    const response = await fetch('https://run.mocky.io/v3/092aa87f-5e6a-44ad-babf-166820042e7a');
+    const data = await response.json();
+  
+    const container = document.getElementById('magazin-news');
+    let html = '';
+  
+    data.forEach(item => {
+      html += `
+        <div class="card p-2 mb-2">
+          <img src="${item.image}" class="w-100 rounded mb-1" alt="Magazin Haber">
+          <p class="fw-bold small m-0">${item.title}</p>
+        </div>
+      `;
+    });
+  
+    container.innerHTML = html;
+  }
+  
+  loadMagazinNews();
   
 
   async function loadWeather() {

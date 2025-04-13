@@ -46,7 +46,7 @@ body {
 
 .ad-box {
   width: 100%;
-  height: 240px;
+  height: 300px;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -69,6 +69,12 @@ body {
     position: sticky;
     top: 120px;
     z-index: 1000;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-img {
+    height: 240px;
   }
 }
 
@@ -103,32 +109,47 @@ body {
 
 .slider-img {
   width: 100%;
-  height: 300px;
+  height: 500px;
   object-fit: cover;
-  border-radius: 12px;
-}
-
-
-/* Kartlar */
-.card, .weather-card {
+  border-radius: 10px;
+  padding: 8px 6px;
+  text-align: center;
   flex: 1;
-  height: 100%;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
 }
+
+.slider-img:hover {
+  transform: translateY(-5px);
+
+}
+
 .card:hover, .weather-card:hover {
   transform: translateY(-5px);
 }
 
 .weather-card {
-  padding: 1rem;
+  padding: 0.1rem;
   background: linear-gradient(145deg, #403060, #805080);
   color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 6px;
+  text-align: center;
+  flex: 1;
+  min-width: 30px;
 }
 .weather-card h5 {
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+
+#magazin-news .card {
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 6px;
+  text-align: center;
+  flex: 1;
+  height: 100%; 
+  height: 300px;
 }
 
 #weather-container .card {
@@ -138,15 +159,16 @@ body {
   padding: 8px 6px;
   text-align: center;
   flex: 1;
-  min-width: 40px;
+  min-width: 30px;
 }
+
 #weather-container .fw-bold {
   font-size: 0.75rem;
 }
 
 .weather-icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   margin-bottom: 4px;
 }
