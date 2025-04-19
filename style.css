@@ -7,12 +7,12 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #343a40 !important;
+  background-color: #343a40 ;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand, .nav-link {
-  color: #ffffff !important;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -20,6 +20,7 @@ body {
   color: #17a2b8 !important;
 }
 
+/* Finance Bar */
 .finance-bar {
   background-color: #ffffff;
   border-bottom: 1px solid #dee2e6;
@@ -44,38 +45,38 @@ body {
   color: #6c757d;
 }
 
+/* AdBox */
 .ad-box {
-  width: 100%;
-  height: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 1, 0.606);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  max-height: 100vh; /* ekran yüksekliğine göre */
+  overflow-y: auto;
+  text-align: center;
+  border-radius: 20px;
   position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.ad-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.ad-box a p {
+  font-size: 0.9rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+
+.ad-box a img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 5px;
 }
 
 .ad-box img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-@media (min-width: 992px) {
-  .sticky-ad {
-    position: sticky;
-    top: 120px;
-    z-index: 1000;
-  }
-}
-
-@media (max-width: 768px) {
-  .slider-img {
-    height: 240px;
-  }
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.208);
 }
 
 .ad-box button {
@@ -100,79 +101,345 @@ body {
   background-color: #bb2d3b;
 }
 
-
 .sticky-ad {
   position: sticky;
-  top: 120px;
+  top: 100px;
   z-index: 1000;
 }
 
+.sticky-ad img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* News Slider */
 .slider-img {
   width: 100%;
-  height: 500px;
+  height: 550px;
   object-fit: cover;
   border-radius: 10px;
-  padding: 8px 6px;
   text-align: center;
   flex: 1;
 }
 
-.slider-img:hover {
-  transform: translateY(-5px);
-
+.slider-full-title  {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgb(255, 6, 6), rgba(0, 0, 0, 0.9));
+  color: #FFD700;
+  padding: 30px 20px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  z-index: 10;
 }
 
-.card:hover, .weather-card:hover {
+.carousel-inner {
+  position: relative !important;
+}
+
+.carousel-indicators {
+  margin-top: -10px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 6px !important;
+  z-index: 999 !important;
+}
+
+.carousel-indicators button {
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  background-color: #ffffff !important;
+  border: 2px solid #000 !important;
+  opacity: 0.8 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.carousel-indicators .active {
+  background-color: #FF0000 !important;
+  border-color: #FFD700 !important;
+  opacity: 1 !important;
+}
+
+.carousel-indicators button:hover {
+  transform: scale(1.3) !important;
+}
+
+
+
+/* Weather + Magazine */
+ .weather-card:hover {
   transform: translateY(-5px);
+}
+
+#magazineCarousel {
+  width: 100%;
+  max-width: 100%;
+}
+
+.magazine-img {
+  width: 250;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+}
+
+.col-md-4 {
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .weather-card {
   padding: 0.1rem;
-  background: linear-gradient(145deg, #403060, #805080);
+  background: linear-gradient(145deg, #b7e1ffa1, #687fc0a4);
   color: white;
   border: none;
   border-radius: 10px;
   padding: 8px 6px;
-  text-align: center;
+  text-align: left;
   flex: 1;
   min-width: 30px;
+  min-height: 100px;
 }
+
 .weather-card h5 {
   font-size: 0.9rem;
 }
 
-#magazin-news .card {
-  background: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 8px 6px;
-  text-align: center;
-  flex: 1;
-  height: 100%; 
-  height: 300px;
-}
-
 #weather-container .card {
-  background: #fff;
+  background: linear-gradient(145deg, #c5dbe1, #597c8540);
   border: none;
   border-radius: 10px;
-  padding: 8px 6px;
-  text-align: center;
+  padding: 8px 3px;
+  text-align: left;
   flex: 1;
   min-width: 30px;
+  margin-top: 30px;
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.725);       
 }
 
 #weather-container .fw-bold {
-  font-size: 0.75rem;
+  font-size: 0.80rem;
+  margin-top: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 
+    10px 10px 0 rgb(0, 0, 0),
 }
 
 .weather-icon {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
-  margin-bottom: 4px;
+  margin-top: 20px;
 }
 #weather-container .temp {
   font-size: 0.75rem;
-  line-height: 1;
+  line-height: 3;
+  margin-top: 30px;
+}
+
+/* Authors */
+.author-img {
+  background-color: #c70a1d; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+  padding: 10px;
+  background-size: 60% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0.9;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+#authorCarousel .carousel-item .text-center {
+  width: 180px;
+  flex-shrink: 0;
+}
+.red-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #c70a1d;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .slider-img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .slider-full-title {
+    font-size: 1rem;  
+    padding: 15px;
+    bottom: 10px;
+  }
+
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;          
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    padding: 5px;
+  }
+
+  #authorCarousel .carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  .sticky-ad {
+    position: static;
+    top: auto;
+    margin-top: 1rem;
+  }
+
+  .ad-box {
+    height: auto;
+    padding: 5px;
+  }
+
+  .magazine-img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
+.dont-miss-section {
+  margin: 40px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 4px;
+  background: #ddd;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+
+/* don't miss card */
+#dont-miss-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.dont-miss-card {
+  flex: 1 1 calc(25% - 20px); /* 4 kart yanyana */
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 992px) {
+  .dont-miss-card {
+    flex: 1 1 calc(50% - 20px); /* tablet görünüm: 2 sütun */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dont-miss-card {
+    flex: 1 1 100%; /* mobil görünüm: tek sütun */
+  }
+}
+
+.dont-miss-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dont-miss-card p {
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+
+/* Tablet görünüm (768px - 992px) */
+@media (max-width: 991.98px) {
+  .slider-img {
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  #newsCarousel {
+    margin-bottom: 20px;
+  }
+
+  .carousel-indicators {
+    bottom: 10px;
+    margin-top: 0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 7%;
+  }
+
+  .carousel-inner {
+    height: auto !important;
+  }
+
+  .col-md-8,
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
