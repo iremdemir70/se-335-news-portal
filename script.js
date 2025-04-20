@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  loadFinance();
   closeAdHandlers();
+  loadFinance();
   loadSlider();
   loadMagazineSlider();
   loadWeather();
