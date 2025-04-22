@@ -2,6 +2,11 @@
 
 Images from the mock API are loading a little slowly. Please wait a little bit.
 
+# Project Layout
+
+![Uploading Screenshot 2025-04-22 at 15.43.15.png…]()
+
+
 # Project Description
 
 This is a responsive news portal web application built using HTML, CSS, Bootstrap, and JavaScript. It displays dynamically loaded content such as news headlines, weather forecasts, finance data, and magazine highlights using mock APIs (JSONBin).
