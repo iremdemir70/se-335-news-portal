@@ -4,8 +4,6 @@ Images from the mock API are loading a little slowly. Please wait a little bit.
 
 # Project Layout
 
-![Uploading Screenshot 2025-04-22 at 15.43.15.png…]()
-
 ![Proje ScreenShot](news-portal/assets/Project_SS.png)
 
 # Project Description
