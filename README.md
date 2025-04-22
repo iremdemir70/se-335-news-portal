@@ -1,5 +1,6 @@
 # se-335-news-portal
 
+Images from the mock API are loading a little slowly. Please wait a little bit.
 
 # Project Description
 
