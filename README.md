@@ -1,5 +1,6 @@
 # se-335-news-portal
 
+![Proje ScreenShot](news-portal/assets/Project_SS.png)
 
 # Project Description
 
