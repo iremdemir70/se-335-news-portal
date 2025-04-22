@@ -4,7 +4,7 @@ Images from the mock API are loading a little slowly. Please wait a little bit.
 
 # Project Layout
 
-![Proje ScreenShot](news-portal/assets/Project_SS.png)
+![Proje ScreenShot](https://github.com/iremdemir70/se-335-news-portal/blob/main/assets/Project_SS.png?raw=true)
 
 # Project Description
 
